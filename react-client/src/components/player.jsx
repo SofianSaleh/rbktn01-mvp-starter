@@ -22,6 +22,9 @@ class Players extends Component {
     return (
       <div>
           <center>
+          <h3>English Premier League Match Day</h3>
+
+            <br/>
               <label htmlFor="matchDay">Enter the Match Day: </label>
               <input type="number" name='matchDay' value={this.state.matchDay} id="matchDay" onChange={this.changeHandler.bind(this)}/>
               <button type="submit" onClick={this.submitNumber.bind(this)}> Submit</button>

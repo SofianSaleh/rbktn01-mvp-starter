@@ -34,6 +34,7 @@ app.use(express.static('client/build'));
 
 app.post("/signup", function(req, res) {
   data = req.body;
+  console.log(data)
   User.findOne(data.username, (err, result) => {
     if (err) {
       return console.log("error");

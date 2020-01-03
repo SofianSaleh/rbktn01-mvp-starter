@@ -27,7 +27,6 @@ export class SignUp	 extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-	this.props.navBar()
 
 
     if (

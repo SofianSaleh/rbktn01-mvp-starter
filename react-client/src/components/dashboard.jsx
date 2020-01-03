@@ -135,16 +135,17 @@ class Dashboard extends Component {
           </NavLink>
         </div>
           <center>
-        <h1>Welcome {this.props.location.state.username}</h1>;{this.state.teams}
+        <h1>Welcome {this.props.location.state.username}</h1>{this.state.teams}
         <button type="submit" onClick={this.changeToMatches.bind(this)}>
           Matches
         </button>
         <button type="submit" onClick={this.changeToTeam.bind(this)}>
           Your Team
         </button>
-
+      <br/>
         {this.state.changeTeam ? 
         <div>
+        <br/>
           <form onSubmit={this.handleSubmit.bind(this)} style={forms}>
             <label htmlFor="Name" style={labels}>
               Name:{" "}
