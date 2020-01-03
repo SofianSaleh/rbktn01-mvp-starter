@@ -1,5 +1,7 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/test");
+
+
+mongoose.connect("mongodb://localhost/team");
 
 var db = mongoose.connection;
 
@@ -11,16 +13,19 @@ db.once("open", function() {
   console.log("mongoose connected successfully");
 });
 
-var userSchema = mongoose.Schema({
-  username:  String,
-  email:  String,
-  password:  String
+
+
+var teamSchema = mongoose.Schema({
+  name:  String,
+  age:  Number,
+  position:  String,
+  contract: Date
 });
 
-var User = mongoose.model("User", userSchema);
+var Team = mongoose.model("Team", teamSchema);
 
 var selectAll = function(callback) {
-  User.find({}, function(err, items) {
+  Team.find({}, function(err, items) {
     if (err) {
       callback(err, null);
     } else {
@@ -29,12 +34,12 @@ var selectAll = function(callback) {
   });
 }
 
-  var findOne = function(username,callback) {
-    User.find({username: username}, callback);
+  var findOne = function(name,callback) {
+    Team.find({name: name}, callback);
   }
 
-  var insertOne = function(user,callback) {
-    User.create(user, callback);
+  var insertOne = function(team,callback) {
+    Team.create(team, callback);
   }
 
 

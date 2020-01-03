@@ -19,11 +19,16 @@
   "dependencies": {
     "angular": "^1.6.3",
     "body-parser": "^1.17.2",
+    "bootstrap": "^4.4.1",
     "express": "^4.15.0",
     "jquery": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^4.8.6",
     "mysql": "^2.13.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^15.4.2",
+    "react-router-dom": "^5.1.2",
+    "validator": "^12.1.0"
   }
 }
