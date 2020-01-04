@@ -103,6 +103,7 @@ class Dashboard extends Component {
   }
 
   render() {
+
     const navBar = {
       display: "inline",
       textAlign: "right",
@@ -127,6 +128,9 @@ class Dashboard extends Component {
       padding: "5px"
     };
 
+    const buttonStyle1 = {borderRadius: "5px",  textAlign: "center", background:"#80bfff", color: 'white'} ;
+
+
     return (
       <div>
         <div style={navBar}>
@@ -136,10 +140,10 @@ class Dashboard extends Component {
         </div>
           <center>
         <h1>Welcome {this.props.location.state.username}</h1>{this.state.teams}
-        <button type="submit" onClick={this.changeToMatches.bind(this)}>
+        <button style={buttonStyle1} type="submit" onClick={this.changeToMatches.bind(this)}  >
           Matches
         </button>
-        <button type="submit" onClick={this.changeToTeam.bind(this)}>
+        <button type="submit" onClick={this.changeToTeam.bind(this)} style={buttonStyle1}>
           Your Team
         </button>
       <br/>
@@ -191,7 +195,7 @@ class Dashboard extends Component {
               onChange={this.handleChange.bind(this)}
               />
             <br />
-            <button type="submit" onClick={this.componentDidMount()}>Add</button>
+            <button type="submit" onClick={this.componentDidMount()} style={buttonStyle1}>Add</button>
             <p>{this.state.error}</p>
           </form>
        
